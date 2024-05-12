@@ -1,0 +1,1 @@
+from djobwise.celery import celery

@@ -1,0 +1,34 @@
+[
+    {
+        "identifier": "greenhouse",
+        "name": "GreenHouse",
+        "domain": "boards.greenhouse.io"
+    },
+    {
+        "identifier": "lever",
+        "name": "Lever Co",
+        "domain": "jobs.lever.co"
+    },
+    {
+        "identifier": "breezy",
+        "name": "Breezy Hr",
+        "domain": "breezy.hr",
+        "identifier_by_prefix": true
+    },
+    {
+        "identifier": "zohorecruit",
+        "name": "ZohoRecruit",
+        "domain": "zohorecruit.com",
+        "identifier_by_prefix": true
+    },
+    {
+        "identifier": "ashbyhq",
+        "name": "Ashby",
+        "domain": "jobs.ashbyhq.com"
+    },
+    {
+        "identifier": "workable",
+        "name": "Workable",
+        "domain": "apply.workable.com"
+    }
+]
