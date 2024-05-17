@@ -18,10 +18,7 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div
-          className="collapse navbar-collapse d-flex justify-content-between"
-          id="navbarSupportedContent"
-        >
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div className="d-flex justify-content-center w-75">
             <ul className="navbar-nav gap-4 ps-5 ms-5">
               <li className="nav-item">
