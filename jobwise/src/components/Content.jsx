@@ -23,7 +23,7 @@ const Content = () => {
       style={{ backgroundColor: "#F5F5F5" }}
     >
       <div
-        style={{ width: "20%" }}
+        style={{ minWidth: "250px" }}
         className="bg-white p-4 d-flex flex-column gap-4 h-100"
       >
         <h1>Filters</h1>
@@ -37,7 +37,7 @@ const Content = () => {
         />
         <JobGroup />
       </div>
-      <div style={{ width: "25%" }}>
+      <div style={{ minWidth: "250px" }}>
         <Sidebar />
       </div>
     </div>
