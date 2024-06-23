@@ -1,21 +1,21 @@
 import React from "react";
-import { IoLocationOutline } from "react-icons/io5";
-import { IoTimeOutline } from "react-icons/io5";
+import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { CgDollar } from "react-icons/cg";
 import { CiCalendarDate } from "react-icons/ci";
 
 const timeSince = (datetime) => {
+  // This function should convert datetime to a human-readable time since format.
+  // For now, it just returns the datetime.
   return datetime;
 };
 
 const JobCard = ({ jobDetails }) => {
   return (
-    <div className="d-flex bg-white p-3">
-      <div className="" style={{ width: "10%" }}></div>
-      <div className="d-flex flex-column gap-3" style={{ width: "90%" }}>
-        <div>{jobDetails.companyName}</div>
-        <h3>{jobDetails.positionTitle}</h3>
-        <div className="d-flex justify-content-between">
+    <div className="card mb-3 shadow-sm">
+      <div className="card-body">
+        <h5 className="card-title mb-1">{jobDetails.companyName}</h5>
+        <h3 className="card-subtitle mb-3 text-primary">{jobDetails.positionTitle}</h3>
+        <div className="d-flex flex-wrap gap-3 mb-3">
           <div className="d-flex gap-2 align-items-center">
             <IoLocationOutline size={18} />
             <div>{jobDetails.location}</div>
@@ -33,7 +33,7 @@ const JobCard = ({ jobDetails }) => {
             <div>{timeSince(jobDetails.postedAt)}</div>
           </div>
         </div>
-        <div>{jobDetails.description}</div>
+        <p className="card-text">{jobDetails.description}</p>
       </div>
     </div>
   );
