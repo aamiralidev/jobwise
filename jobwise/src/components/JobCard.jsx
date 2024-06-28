@@ -48,11 +48,15 @@ const JobCard = ({ jobDetails }) => {
             }}
           />
           <button
-            className={`btn btn-link position-absolute bottom-0 end-0 m-2 ${
-              !expanded ? "blurry-background" : ""
+            className={`btn btn-link position-absolute bottom-0 end-0 mb-2 me-2 ms-0 ps-1 ${
+              !expanded ? "bg-white" : "bg-white"
             }`}
             onClick={toggleExpand}
-            style={{ textDecoration: "none" }}
+            style={{
+              textDecoration: "none",
+              // boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              background: "linear-gradient(white, rgba(255, 255, 255, 0))",
+            }}
           >
             {expanded ? "Show less" : "Show more"}
           </button>
