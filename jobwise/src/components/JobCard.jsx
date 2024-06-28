@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { CgDollar } from "react-icons/cg";
 import { CiCalendarDate } from "react-icons/ci";
@@ -11,6 +11,12 @@ const timeSince = (datetime) => {
 };
 
 const JobCard = ({ jobDetails }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <div className="card mb-3 shadow-sm">
       <div className="card-body">
@@ -34,12 +40,23 @@ const JobCard = ({ jobDetails }) => {
             <div>{timeSince(jobDetails.date_posted)}</div>
           </div>
         </div>
-        <p
-          className="card-text"
-          dangerouslySetInnerHTML={{
-            __html: DOMPurify.sanitize(jobDetails.job_description),
-          }}
-        />
+        <div style={{ maxHeight: "calc(1.5em * 3)", overflow: "hidden" }}>
+          <p
+            className="card-text"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(jobDetails.job_description),
+            }}
+          />
+          <button
+            className={`btn btn-link position-absolute bottom-0 end-0 m-2 ${
+              !expanded ? "blurry-background" : ""
+            }`}
+            onClick={toggleExpand}
+            style={{ textDecoration: "none" }}
+          >
+            {expanded ? "Show less" : "Show more"}
+          </button>
+        </div>
       </div>
     </div>
   );
