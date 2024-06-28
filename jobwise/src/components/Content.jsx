@@ -66,7 +66,7 @@ const Content = () => {
             }
           >
             <div className="bg-white p-4 d-flex flex-column gap-4">
-              <div className="d-flex justify-content-between">
+              <div className="d-flex">
                 <h1>Filters</h1>
                 <div
                   className="ms-2 pb-2"

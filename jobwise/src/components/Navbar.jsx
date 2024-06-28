@@ -1,6 +1,9 @@
 import React from "react";
+import useWindowDimensions from "../hooks/dimension";
 
 const Navbar = () => {
+  const { height, width } = useWindowDimensions();
+
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div
@@ -44,8 +47,14 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <div className="d-flex align-items-center">
-            <button className="btn btn-outline-primary me-3">Log In</button>
+          <div
+            className={`${
+              width < 800
+                ? "d-flex flex-column gap-3 align-items-start mt-4"
+                : "d-flex align-items-center gap-3"
+            }`}
+          >
+            <button className="btn btn-outline-primary">Log In</button>
             <button className="btn btn-primary">Sign Up</button>
           </div>
         </div>

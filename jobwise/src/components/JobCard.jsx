@@ -18,7 +18,7 @@ const JobCard = ({ jobDetails }) => {
   };
 
   return (
-    <div className="card mb-3 shadow-sm">
+    <div className="card mb-3 shadow-sm border-0">
       <div className="card-body">
         <h5 className="card-title mb-1">{jobDetails.company_name}</h5>
         <h3 className="card-subtitle mb-3 text-primary">{jobDetails.title}</h3>

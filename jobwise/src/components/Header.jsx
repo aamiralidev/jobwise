@@ -7,14 +7,18 @@ const Header = () => {
   return (
     <>
       <Navbar />
-      <div className="container-fluid p-3 p-md-4" style={{ maxWidth: "1440px" }}>
+      <div
+        className="container-fluid p-3 p-md-4"
+        style={{ maxWidth: "1440px" }}
+      >
         <div className="bg-white px-4 py-5">
-          <div className=" text-center text-md-start">
+          <div className="text-start">
             <h1 className="mb-2 fw-bold display-4">
               Find your <span className="text-primary">new job</span> today
             </h1>
             <p className="lead">
-              Thousands of jobs in the computer, engineering, and technology sectors are waiting for you.
+              Thousands of jobs in the computer, engineering, and technology
+              sectors are waiting for you.
             </p>
           </div>
           <div className="row mt-4 g-2">
