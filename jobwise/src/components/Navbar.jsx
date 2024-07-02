@@ -1,8 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import useWindowDimensions from "../hooks/dimension";
 
 const Navbar = () => {
   const { height, width } = useWindowDimensions();
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate("/login");
+  };
+
+  const handleSignUpClick = () => {
+    navigate("/signup");
+  };
 
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -54,8 +64,15 @@ const Navbar = () => {
                 : "d-flex align-items-center gap-3"
             }`}
           >
-            <button className="btn btn-outline-primary">Log In</button>
-            <button className="btn btn-primary">Sign Up</button>
+            <button
+              className="btn btn-outline-primary"
+              onClick={handleLoginClick}
+            >
+              Log In
+            </button>
+            <button className="btn btn-primary" onClick={handleSignUpClick}>
+              Sign Up
+            </button>
           </div>
         </div>
       </div>
